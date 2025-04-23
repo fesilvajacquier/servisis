@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Service Objects en Rails</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -26,9 +26,10 @@
             </aside>
           </section>
           <section>
-            <aside class="notes">
-              Introducción speaker
-            </aside>
+            <!-- foto -->
+            <p>Fernando E. Silva Jacquier</p>
+            <p>Tech Lead en <a href="https://www.boxful.io" target="_blank" rel="noopener">Boxful</a></p>
+            <p>Teacher en <a href="https://www.lewagon.com/" target="_blank" rel="noopener">Le Wagon</a></p>
           </section>
         </section>
 
@@ -36,15 +37,6 @@
         <section>
           <section>
             <h2>Críticas</h2>
-            <aside class="notes">
-              Al final mencionar:
-              <ul>
-                <li>"Some of these are valid—but many sound more like programming fundamentalism than practical concerns."</li>
-                <li>"This idea that a service object is bad because it's not pure OOP is missing the point. We're not writing code for the sake of theory—we're writing code to solve real-world problems."</li>
-                <li>"Sometimes, a service object does look more like functional programming. But who cares, if it brings clarity and separation of concerns?"</li>
-                <li>"Be pragmatic, not dogmatic."</li>
-              </ul>
-            </aside>
           </section>
           <section>
             <blockquote>
@@ -54,20 +46,11 @@
              > Service Objects accumulate invisible inter-service coupling
             </blockquote>
             <p>
-             <a href="https://avdi.codes/service-objects/">Service Objects</a> by Avdi Grimm
+             <a href="https://avdi.codes/service-objects/" target="_blank" rel="noopener">Service Objects</a> by Avdi Grimm
             </p>
           </section>
           <section>
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Using services is, in essence, ignoring OOP and having your code in imperative mode. This serie by <a href="https://twitter.com/jorgemanru?ref_src=twsrc%5Etfw">@jorgemanru</a> changed my way of looking at fat models. They&#39;re good! Let the domain model do the job instead of exposing implementation details. <a href="https://t.co/p1AgfK0jx6">https://t.co/p1AgfK0jx6</a></p>&mdash; Bruno Prieto (@brunoprietog) <a href="https://twitter.com/brunoprietog/status/1882503197530734601?ref_src=twsrc%5Etfw">January 23, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </section>
-          <section>
-            <blockquote>
-              > This class does a lot, but that’s the nature of business logic — it’s complex but usually quite sequential. It also doesn’t look very ruby-like — it’s not neatly object-oriented code. It’s not SOLID! It looks rather… procedural, doesn’t it?
-            </blockquote>
-            <p>
-              <a href="https://medium.com/@thilorusche/service-objects-for-rails-9c5973dc8bc2">Service Objects for Rails</a>
-            </p>
-            <small>Es un artículo a favor de los service objects pero enuncia esta crítica que suele aparecer</small>
           </section>
           <section>
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">So, everybody who refactored their entire codebase&#39;s jobs and controllers into 1-liners that say <a href="https://t.co/XUAJzN1xW3">https://t.co/XUAJzN1xW3</a> now all have perfect, clean code, right? Living in heavenly bliss, yeah?</p>&mdash; Nate Berkopec (@nateberkopec) <a href="https://twitter.com/nateberkopec/status/1675675501438828545?ref_src=twsrc%5Etfw">July 3, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -83,14 +66,66 @@
               > What does this mean? It means the service object pattern has no intrinsic ability to make your codebase easier to read, easier to maintain, simpler, or exhibit better separation of concerns.
             </blockquote>
             <p>
-              <a href="https://www.fullstackruby.dev/object-orientation/rails/2018/03/06/why-service-objects-are-an-anti-pattern/">Why Service Objects are an Anti-Pattern</a> by Jared White
+              <a href="https://www.fullstackruby.dev/object-orientation/rails/2018/03/06/why-service-objects-are-an-anti-pattern/" target="_blank" rel="noopener">Why Service Objects are an Anti-Pattern</a> by Jared White
             </p>
           </section>
+          <section>
+            <img src="images/defreyne.jpg" alt="" class="r-stretch">
+          </section>
+          <section>
+            <img src="images/morrice.jpg" alt="" class="r-stretch">
+          </section>
         </section>
-        <!-- Entonces, ¿Por qué existe los service objects? -->
+        <!-- Entonces, ¿Por qué son tan populares los service objects? -->
         <section>
           <section>
-            <h3>Entonces, ¿Por qué existen estas críticas?</h3>
+            <h3>Entonces, ¿Por qué son tan populares los service objects?</h3>
+          </section>
+          <section>
+            <p>La doctrina de de Rails dice: <a href="https://rubyonrails.org/doctrine#no-one-paradigm">No one paradigm</a></p>
+            <small>
+              <blockquote>
+                > Rails isn’t like that. It isn’t a single, perfect cut of cloth. It’s a quilt. A composite of many different ideas and even paradigms. Many that would usually be seen in conflict, if contrasted alone and one by one. But that’s not what we’re trying to do. It isn’t a single championship of superior ideas where a sole winner must be declared.
+              </blockquote>
+            </small>
+          </section>
+          <section>
+            <h3>Peeeeeeeero...</h3>
+          </section>
+          <section>
+            <div style="display: flex;">
+              <div style="width: 30%;">
+                <img src="images/eaa.jpg" alt="">
+              </div>
+              <div style="width: 70%;">
+                <small>
+                  <p>En <a href="https://guides.rubyonrails.org/active_record_basics.html#the-active-record-pattern" target="_blank" rel="noopener">Rails Guides - Active Record Basics</a> se hace mención directa a <a href="https://martinfowler.com/books/eaa.html" target="_blank" rel="noopener">Patterns of Enterprise Application Architecture</a> de Martin Fowler</p>
+                <p>
+                    Un libro donde se habla del <em>Service Layer Pattern</em>. Que propone una <em>service layer</em> que coordina <em>domain objects</em>
+                  </p>
+                </small>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div style="display: flex;">
+              <div style="width: 30%;">
+                <img src="images/ddd.jpg" alt="Domain Driven Design">
+              </div>
+              <div style="width: 70%;">
+                <small>
+                  <p>
+                    En las guias de Rails no se menciona a <a href="https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215">Domain Driven Design</a> pero muchas de sus ideas están presentes.
+                  </p>
+                <p>
+                  Por ejemplo, los conceptos de <em>layered architecture</em> (cómo en el patrón MVC) y <em>domain objects</em>.
+                </p>
+                <p>
+                    Este es un libro donde se habla de una <em>Application Layer</em> que deber ser fina, no contener lógica de negocio (porque la lógica de negocio debería estar en los <em>domain objects</em>) y también habla del concepto de <em>Services</em>.
+                  </p>
+                </small>
+              </div>
+            </div>
           </section>
           <section>
             <img src="images/mvc_architecture_dark.jpg" alt="MVC Architecture">
@@ -112,7 +147,7 @@
           <section>
             <blockquote>> We don’t distinguish application and domain layers</blockquote>
             <p>
-              <a href="https://world.hey.com/jorge/code-i-like-iv-vanilla-rails-is-plenty-71d0465c">Code I Like - IV - Vanilla Rails is Plenty</a> by Jorge Manrubia (37 signals)
+              <a href="https://world.hey.com/jorge/code-i-like-iv-vanilla-rails-is-plenty-71d0465c" target="_blank" rel="noopener">Code I Like - IV - Vanilla Rails is Plenty</a> by Jorge Manrubia (37 signals)
             </p>
           </section>
         </section>
@@ -122,7 +157,7 @@
             <h2>Acá la charla se podría bifurcar</h2>
           </section>
           <section>
-            <img src="images/meme_paths.png" alt="Meme Paths">
+            <img src="images/meme_paths.png" alt="Meme Paths" class="r-stretch">
           </section>
         </section>
 
