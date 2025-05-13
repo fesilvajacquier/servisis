@@ -28,15 +28,19 @@
           <section>
             <!-- foto -->
             <p>Fernando E. Silva Jacquier</p>
-            <p>Tech Lead en <a href="https://www.boxful.io" target="_blank" rel="noopener">Boxful</a></p>
-            <p>Teacher en <a href="https://www.lewagon.com/" target="_blank" rel="noopener">Le Wagon</a></p>
+            <p><small>fesilvajacquier</small></p>
+            <small>
+              <p>Tech Lead en <a href="https://www.boxful.io" target="_blank" rel="noopener">Boxful</a></p>
+              <p>Consultor</p>
+              <p>Teacher en <a href="https://www.lewagon.com/" target="_blank" rel="noopener">Le Wagon</a></p>
+            </small>
           </section>
         </section>
 
         <!-- Críticas a los Service Objects -->
         <section>
           <section>
-            <h2>Críticas</h2>
+            <h2>Empecemos por las críticas</h2>
           </section>
           <section>
             <blockquote>
@@ -62,18 +66,18 @@
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Started at 1, leveled up to 4 <a href="https://t.co/KywL9sKL4P">pic.twitter.com/KywL9sKL4P</a></p>&mdash; Jose Farias (@readjosefarias) <a href="https://twitter.com/readjosefarias/status/1856736691186508043?ref_src=twsrc%5Etfw">November 13, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </section>
           <section>
+            <img src="images/defreyne.jpg" alt="" class="r-stretch">
+          </section>
+          <section>
+            <img src="images/morrice.jpg" alt="" class="r-stretch">
+          </section>
+          <section>
             <blockquote>
               > What does this mean? It means the service object pattern has no intrinsic ability to make your codebase easier to read, easier to maintain, simpler, or exhibit better separation of concerns.
             </blockquote>
             <p>
               <a href="https://www.fullstackruby.dev/object-orientation/rails/2018/03/06/why-service-objects-are-an-anti-pattern/" target="_blank" rel="noopener">Why Service Objects are an Anti-Pattern</a> by Jared White
             </p>
-          </section>
-          <section>
-            <img src="images/defreyne.jpg" alt="" class="r-stretch">
-          </section>
-          <section>
-            <img src="images/morrice.jpg" alt="" class="r-stretch">
           </section>
         </section>
         <!-- Entonces, ¿Por qué son tan populares los service objects? -->
@@ -85,7 +89,7 @@
             <p>La doctrina de de Rails dice: <a href="https://rubyonrails.org/doctrine#no-one-paradigm">No one paradigm</a></p>
             <small>
               <blockquote>
-                > Rails isn’t like that. It isn’t a single, perfect cut of cloth. It’s a quilt. A composite of many different ideas and even paradigms. Many that would usually be seen in conflict, if contrasted alone and one by one. But that’s not what we’re trying to do. It isn’t a single championship of superior ideas where a sole winner must be declared.
+                > Rails isn't like that. It isn't a single, perfect cut of cloth. It's a quilt. A composite of many different ideas and even paradigms. Many that would usually be seen in conflict, if contrasted alone and one by one. But that's not what we're trying to do. It isn't a single championship of superior ideas where a sole winner must be declared.
               </blockquote>
             </small>
           </section>
@@ -115,7 +119,7 @@
               <div style="width: 70%;">
                 <small>
                   <p>
-                    En las guias de Rails no se menciona a <a href="https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215">Domain Driven Design</a> pero muchas de sus ideas están presentes.
+                    En las guías de Rails no se menciona a <a href="https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215">Domain Driven Design</a> pero muchas de sus ideas están presentes.
                   </p>
                 <p>
                   Por ejemplo, los conceptos de <em>layered architecture</em> (cómo en el patrón MVC) y <em>domain objects</em>.
@@ -126,16 +130,6 @@
                 </small>
               </div>
             </div>
-          </section>
-          <section>
-            <img src="images/mvc_architecture_dark.jpg" alt="MVC Architecture">
-            <p>En las <a href="https://guides.rubyonrails.org/getting_started.html#model-view-controller-basics">guías de Rails</a> no se menciona quién se encarga de coordinar a los <em>domain objects</em></p>
-          </section>
-          <section>
-            <img src="images/arch-abs-layers.png" alt="Architecture Abstractions Layers">
-            <p>
-              <a href="https://www.packtpub.com/en-us/product/layered-design-for-ruby-on-rails-applications-9781801813785">Layered Design for Ruby on Rails Applications</a> by Vladimir Dementyev (Evil Martians)
-            </p>
             <aside class="notes">
               <ul>
                 <li>Presentation layer: Responsible for handling user interactions and presenting the information to users (via the UI).</li>
@@ -143,137 +137,199 @@
                 <li>Domain layer: Describes entities, rules, invariants, and so on. This layer maintains the state of the application.</li>
                 <li>Infrastructure layer: Consists of supporting technologies (databases, frameworks, API clients, and so on).</li>
               </ul>
+            </aside>
           </section>
           <section>
-            <blockquote>> We don’t distinguish application and domain layers</blockquote>
-            <p>
-              <a href="https://world.hey.com/jorge/code-i-like-iv-vanilla-rails-is-plenty-71d0465c" target="_blank" rel="noopener">Code I Like - IV - Vanilla Rails is Plenty</a> by Jorge Manrubia (37 signals)
-            </p>
+            <h3>Yyyy...</h3>
           </section>
-        </section>
-        <!-- Acá la charla se podría bifurcar -->
-        <section>
+          <section>
+            <img src="images/mvc_architecture_dark.jpg" alt="MVC Architecture">
+            <p>En las <a href="https://guides.rubyonrails.org/getting_started.html#model-view-controller-basics">guías de Rails</a> no se menciona quién se encarga de coordinar a los <em>domain objects</em></p>
+          </section>
           <section>
             <h2>Acá la charla se podría bifurcar</h2>
           </section>
           <section>
             <img src="images/meme_paths.png" alt="Meme Paths" class="r-stretch">
           </section>
+          <section>
+            <h3>No usa Service Objects</h3>
+            <blockquote>> We don't distinguish application and domain layers</blockquote>
+            <p>
+              <a href="https://world.hey.com/jorge/code-i-like-iv-vanilla-rails-is-plenty-71d0465c" target="_blank" rel="noopener">Code I Like - IV - Vanilla Rails is Plenty</a> by Jorge Manrubia (37 signals)
+            </p>
+          </section>
+          <section>
+            <h3>No usa Service Objects</h3>
+            <p>
+              <a href="https://github.com/maybe-finance/maybe" target="_blank" rel="noopener">Maybe</a>: The personal finance app for everyone
+            </p>
+          </section>
+          <section>
+            <h3>Usa Service Objects</h3>
+            <img src="images/arch-abs-layers.png" alt="Architecture Abstractions Layers">
+            <p>
+              <a href="https://www.packtpub.com/en-us/product/layered-design-for-ruby-on-rails-applications-9781801813785" target="_blank" rel="noopener">Layered Design for Ruby on Rails Applications</a> by Vladimir Dementyev (Evil Martians)
+            </p>
+          </section>
         </section>
-
-        <!-- Beneficios -->
-        <!-- re escribir toda esta sección manteniendo el espíritu  -->
+        <!-- Por qué usar service objects -->
         <section>
           <section>
-            <h2>Beneficios</h2>
+            <h2>Por qué usar service objects</h2>
           </section>
           <section>
-            <h3>Testeabilidad</h3>
-            <p>
-              Cuando la lógica en los modelos o controladores se vuelve demasiado compleja, probarla independientemente de la otra lógica en esa capa puede ser difícil. En lugar de escribir pruebas que ejerciten tu lógica de negocio bifurcada y preocupaciones HTTP (parámetros de consulta, redirecciones, códigos de estado, etc.), los service objects permiten probar independientemente tus ramas de lógica de negocio. Esto te permite simplificar tus pruebas de controladores (o modelos) y mantenerlas enfocadas en probar el comportamiento relevante a esa capa del sistema.
-            </p>
-            <p>
-              Esta argumentación realmente solo se aplica cuando comparas los service objects con poner tu lógica en la capa de controladores o modelos.
-            </p>
+            <h3>Partamos de un ejemplo (casi) real</h3>
+            <div class="r-stack">
+              <img src="images/subscription_versions.png" alt="Subscription Versions" class="fragment fade-in-then-out">
+              <img src="images/subscription_versions_1.png" alt="Subscription Versions 1" class="fragment fade-in-then-out">
+              <img src="images/subscription_versions_2.png" alt="Subscription Versions 2" class="fragment fade-in-then-out">
+              <img src="images/subscription_versions_3.png" alt="Subscription Versions 3" class="fragment fade-in-then-out">
+            </div>
           </section>
           <section>
-            <h3>Reusabilidad</h3>
-            <p>
-              Ofrecen mejor reusabilidad que poner tu lógica en la capa de controladores porque pueden ser invocados desde cualquier parte del sistema. Sin embargo, esto no los hace significativamente más reutilizables que poner tu lógica en tus modelos, ya que esos también pueden ser invocados donde quieras.
-            </p>
+            <h3>Dónde va la lógica?</h3>
+            <div class="r-stack">
+              <img src="images/cmm_0.png" class="fragment fade-in-then-out" alt="Dónde va la lógica? 0">
+              <img src="images/cmm_1.png" class="fragment fade-in-then-out" alt="Dónde va la lógica? 1">
+              <img src="images/cmm_2.png" class="fragment fade-in-then-out" alt="Dónde va la lógica? 2">
+              <img src="images/cmm_3.png" class="fragment fade-in-then-out" alt="Dónde va la lógica? 3">
+            </div>
           </section>
           <section>
-            <h3>Composabilidad</h3>
-            <p>
-              Porque los service objects pueden ser construidos con diferentes colaboradores, ofrecen la oportunidad de construir nueva lógica en tu sistema a través de composición. Sus APIs relativamente consistentes hacen más fácil armarlos de nuevas maneras.
-            </p>
-            <p>
-              Por ejemplo, cualquier dos service objects que ambos toman un usuario y devuelven un valor booleano pueden ser sustituidos uno por otro, aunque no produzca un resultado deseable.
-            </p>
+            <h3>El principal beneficio...</h3>
+            <!-- fragment this gif https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTByZW56bGc2aXlzcGs0dmt6aWc5ZW90c3lhZmQ2MWc5bG9uemdiNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/rYJBm0wOgkvLTSlXFl/giphy.gif -->
+             <!-- the gif is white so the background should be dark -->
+            <img src=" https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTByZW56bGc2aXlzcGs0dmt6aWc5ZW90c3lhZmQ2MWc5bG9uemdiNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/rYJBm0wOgkvLTSlXFl/giphy.gif" alt="Feels right" class="r-stretch" style="background-color: black;">
           </section>
           <section>
-            <h3>Simplicidad</h3>
-            <p>
-              La principal ventaja de los service objects sobre la mayoría de los otros patrones es que son fáciles de implementar. Necesitas gastar relativamente poco esfuerzo en diseñar la API pública de un service object. Las convenciones en tu proyecto dictan si inyectas colaboradores o hardcodeas ellos. Solo tienen un método, y probablemente se llame call. Los argumentos para llamar son lo que la lógica de negocio necesita. Además de nombrar los argumentos, tu trabajo está casi hecho.
-            </p>
-            <p>
-              Técnicamente, los service objects son un patrón de diseño de nivel intermedio. No requieren que diseñes la API de tus objetos, busques patrones, o pienses en interfaces compartidas. Simplemente, te permiten construir lógica compleja sin tener que lidiar con el diseño.
-            </p>
-            <p>
-              Esta simplicidad también tiene beneficios cuando los desarrolladores encuentran service objects en nuevos codebases. Es fácil decir qué hace un service object y cómo usarlo, incluso si nunca has oído hablar de un service object antes.
-            </p>
+            <h3>Otros beneficios</h3>
+            <pre><code class="ruby" data-trim data-noescape data-line-numbers="1-14|10-13|11">
+              class Subscription::RemoveCoupon
+                include Interactor::Organizer
+
+                before do
+                  context.coupon_id = nil
+                end
+
+                delegate :subscription, :coupon_id, to: :context
+
+                organize SubscriptionVersion::UpsertPending,
+                         SubscriptionVersion::Process,
+                         Subscription::UpdateUpcomingInvoice,
+                         Customer::NotifyNewSubscriptionVersion
+              end
+            </code></pre>
+            Gema: <a href="https://github.com/collectiveidea/interactor">Interactor</a>
           </section>
         </section>
-
         <!-- Cómo aplicarlos -->
         <!-- Completar esta sección -->
         <section>
           <section>
             <h2>Cómo aplicarlos</h2>
-            <h3>The name of the game is convention</h3>
           </section>
           <section>
-            <h3>Cómo se llaman?</h3>
-          </section>
-          <section>
-            <h3>Cómo se ejecutan?</h3>
-          </section>
-          <section>
-            <h3>Qué reciben?</h3>
-          </section>
-          <section>
-            <h3>Qué devuelven?</h3>
-          </section>
-        </section>
+            <h3>Tenemos que evitar el problema <strong>real</strong></h3>
+            <pre><code class="ruby" data-trim data-noescape data-line-numbers="1|2-3|4-5|1-5">
+              # Cómo se llaman?
+              # subject + actor (entidad que ejecuta el verbo)
+              User::PlanUpdater
+              # subject + verb (+ object)
+              User::UpdatePlan # -> user.update(plan)
+            </code></pre>
+            <pre><code class="ruby" data-trim data-noescape data-line-numbers="1|2|4|5|6|7|1-7">
+              # Qué devuelven?
+              result = User::UpdatePlan
 
-        <!-- Ejemplos de Código -->
-        <!-- Transformar esto en ejemplos de distintas gemas -->
-        <section>
-          <section>
-            <h2>Ejemplos de Código</h2>
-            <h3>Antes</h3>
-            <pre><code class="ruby" data-trim data-noescape>
-  class PurchasesController < ApplicationController
-    def create
-      purchase = Purchase.new(params)
-      if purchase.save
-        charge_customer(purchase)
-        update_inventory(purchase)
-        send_confirmation_email(purchase)
-        redirect_to purchase
-      else
-        render :new
-      end
-    end
-  end
+              result.is_a?(User) # ???
+              result.is_a?(TrueClass) # ???
+              result.is_a?(FalseClass) # ???
+              result.is_a?(ResultObject) # ???
             </code></pre>
           </section>
           <section>
-            <h3>Después</h3>
-            <pre><code class="ruby" data-trim data-noescape>
-  class PurchasesController < ApplicationController
-    def create
-      result = Purchase::Creator.call(params)
-      if result.success?
-        redirect_to result.purchase
-      else
-        render :new
-      end
-    end
-  end
-            </code></pre>
+            <h3>The name of the game is convention</h3>
+            <div class="r-stack">
+              <img src="images/shape_0.png" class="fragment fade-in-then-out" alt="Shape 0">
+              <img src="images/shape_1.png" class="fragment fade-in-then-out" alt="Shape 1">
+              <img src="images/shape_2.png" class="fragment fade-in-then-out" alt="Shape 2">
+              <img src="images/shape_3.png" class="fragment fade-in-then-out" alt="Shape 3">
+              <img src="images/shape_4.png" class="fragment fade-in-then-out" alt="Shape 4">
+            </div>
+          </section>
+          <section>
+            <h4><a href="https://rails.services/fowler-evans-ruler/">The Fowler Evans Ruler</a> de Ivan Nemytchenko</h4>
+            <small>
+
+              <table>
+                <tr>
+                  <td>Principio</td>
+                  <td>Verifica</td>
+                </tr>
+                <tr>
+                  <td>1. Sin estado (Stateless)</td>
+                  <td>No tiene variables de instancia ni estado interno</td>
+                </tr>
+                <tr>
+                  <td>2. Nombrado por una actividad</td>
+                  <td>Nombre claro orientado a la acción</td>
+                </tr>
+                <tr>
+                  <td>3. Representa una operación de negocio</td>
+                  <td>Expresa un proceso del mundo real</td>
+                </tr>
+                <tr>
+                  <td>4. Coordina objetos del dominio</td>
+                  <td>Llama a métodos en entidades/value objects</td>
+                </tr>
+                <tr>
+                  <td>5. Controla transacciones</td>
+                  <td>Cambia el estado del sistema</td>
+                </tr>
+                <tr>
+                  <td>6. Tiene efectos secundarios</td>
+                  <td>Produce un impacto observable</td>
+                </tr>
+                <tr>
+                  <td>7. Sin lógica de aplicación</td>
+                  <td>Separación clara de la interfaz y la infraestructura</td>
+                </tr>
+              </table>
+            </small>
+          </section>
+          <section>
+            <h3>No hace falta reinventar la rueda</h3>
+            <small>
+              <p>
+                Podemos usar alguna de las gemas que ya existen para esto.
+              </p>
+            </small>
+          </section>
+          <section>
+            <ul>
+              <li>
+                <a href="https://github.com/collectiveidea/interactor" target="_blank" rel="noopener">Interactor</a>
+              </li>
+              <li>
+                <a href="https://github.com/adomokos/light-service" target="_blank" rel="noopener">Light Service</a>
+              </li>
+              <li>
+                <a href="https://github.com/sunny/actor" target="_blank" rel="noopener">Actor</a>
+              </li>
+              <li>
+                <a href="https://github.com/DmitryTsepelev/clean_actions" target="_blank" rel="noopener">Clean Actions</a>
+              </li>
+              <li>
+                <a href="https://github.com/pabloh/pathway/" target="_blank" rel="noopener">Pathway</a><span>🏠</span>
+              </li>
+            </ul>
           </section>
         </section>
         <!-- Preguntas -->
         <section>
           <section>
-            <h1>¿Preguntas?</h1>
-            <p>Hablemos de:</p>
-            <ul>
-              <li>Cuáles son las críticas a los service objects</li>
-              <li>Cuáles son los beneficios de los service objects</li>
-              <li>Cómo aplicarlos</li>
-            </ul>
+            <h2>¿Preguntas?</h2>
           </section>
         </section>
       </div>
