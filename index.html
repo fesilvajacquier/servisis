@@ -27,12 +27,12 @@
           </section>
           <section>
             <!-- foto -->
-            <p>Fernando E. Silva Jacquier</p>
-            <p><small>fesilvajacquier</small></p>
+            <p>Fernando E. Silva Jacquier<div><small>fesilvajacquier</small></div></p>
+
             <small>
-              <p>Tech Lead en <a href="https://www.boxful.io" target="_blank" rel="noopener">Boxful</a></p>
-              <p>Consultor</p>
-              <p>Teacher en <a href="https://www.lewagon.com/" target="_blank" rel="noopener">Le Wagon</a></p>
+              <div>Tech Lead en <a href="https://www.boxful.io" target="_blank" rel="noopener">Boxful</a></div>
+              <div>Consultor</div>
+              <div>Teacher en <a href="https://www.lewagon.com/" target="_blank" rel="noopener">Le Wagon</a></div>
             </small>
           </section>
         </section>
@@ -99,17 +99,24 @@
           <section>
             <div style="display: flex;">
               <div style="width: 30%;">
-                <img src="images/eaa.jpg" alt="">
+                <img src="images/eaa.jpg" alt="Patterns of Enterprise Application Architecture">
               </div>
               <div style="width: 70%;">
                 <small>
                   <p>En <a href="https://guides.rubyonrails.org/active_record_basics.html#the-active-record-pattern" target="_blank" rel="noopener">Rails Guides - Active Record Basics</a> se hace mención directa a <a href="https://martinfowler.com/books/eaa.html" target="_blank" rel="noopener">Patterns of Enterprise Application Architecture</a> de Martin Fowler</p>
-                <p>
+                  <p>
                     Un libro donde se habla del <em>Service Layer Pattern</em>. Que propone una <em>service layer</em> que coordina <em>domain objects</em>
                   </p>
                 </small>
               </div>
             </div>
+            <aside class="notes">
+              <ul>
+                <li>Service Layer Pattern (Fowler): A pattern that defines an application's business logic in a set of services that orchestrate domain objects and operations, keeping logic out of controllers and UI.</li>
+                <li>Domain Object: An object that models real-world business concepts, containing both data and behavior specific to the domain.</li>
+                <li>Services (Fowler): Objects that define business operations without maintaining state, often used to encapsulate domain logic that doesn't naturally fit into entities or value objects.</li>
+              </ul>
+            </aside>
           </section>
           <section>
             <div style="display: flex;">
@@ -132,10 +139,14 @@
             </div>
             <aside class="notes">
               <ul>
+                <li>Layered Architecture: An architectural style that organizes code into layers—typically UI, application, domain, and infrastructure—to separate concerns and manage complexity.</li>
                 <li>Presentation layer: Responsible for handling user interactions and presenting the information to users (via the UI).</li>
-                <li>Application layer: Organizes domain objects to fulfill required use cases.</li>
+                <li>Application layer: Coordinates tasks and delegates work to the domain layer, without containing business logic itself.</li>
                 <li>Domain layer: Describes entities, rules, invariants, and so on. This layer maintains the state of the application.</li>
                 <li>Infrastructure layer: Consists of supporting technologies (databases, frameworks, API clients, and so on).</li>
+                <li>Services (Evans): Stateless operations that represent domain behavior, used when an action doesn't conceptually belong to any specific object.</li>
+                <li>Domain Services: Services that encapsulate domain logic involving multiple entities or operations that don't belong to a single entity.</li>
+                <li>Application Services: Orchestrators that coordinate domain objects to execute use cases, without implementing business rules themselves.</li>
               </ul>
             </aside>
           </section>
@@ -201,6 +212,13 @@
             <!-- fragment this gif https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTByZW56bGc2aXlzcGs0dmt6aWc5ZW90c3lhZmQ2MWc5bG9uemdiNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/rYJBm0wOgkvLTSlXFl/giphy.gif -->
              <!-- the gif is white so the background should be dark -->
             <img src=" https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTByZW56bGc2aXlzcGs0dmt6aWc5ZW90c3lhZmQ2MWc5bG9uemdiNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/rYJBm0wOgkvLTSlXFl/giphy.gif" alt="Feels right" class="r-stretch" style="background-color: black;">
+            <aside class="notes">
+              Cantidad de commits en los últimos 5 años:
+              <ul>
+                <li>subscription: 94</li>
+                <li>coupon_remover: 5</li>
+              </ul>
+            </aside>
           </section>
           <section>
             <h3>Otros beneficios</h3>
@@ -247,6 +265,13 @@
               result.is_a?(FalseClass) # ???
               result.is_a?(ResultObject) # ???
             </code></pre>
+          </section>
+          <section>
+            <h3>Cómo se siente este problema?</h3>
+            <div class="r-stack">
+              <img src="images/la_plata.png" alt="La Plata" class="fragment fade-in-then-out" style="width: 50%;">
+              <img src="images/venecia.png" alt="Venecia" class="fragment fade-in-then-out" style="width: 50%;">
+            </div>
           </section>
           <section>
             <h3>The name of the game is convention</h3>
